@@ -223,7 +223,8 @@ app.post('/data', async (req, res) => {
     }
     else {
         res.send(await scraper.scrape_student(
-            req.session.username, req.session.password, req.body.quarter
+            req.session.username, req.session.password, req.body.quarter,
+            req.body.yearFilter
         ));
     }
 });
